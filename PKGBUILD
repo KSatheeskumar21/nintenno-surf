@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <k.sath214@gmail.com>
 pkgname=nintenno-surf
-pkgver=2.1.r93.78addef
+pkgver=2.1.r2.e471fb9
 pkgrel=1
 pkgdesc="My Personal surf build at https://github.com/KSatheeskumar21/nintenno-surf"
 arch=(x86_64)
@@ -29,7 +29,7 @@ md5sums=('SKIP')
 validpgpkeys=()
 
 prepare() {
-	cd "${_pkgname}"
+	cd "$pkgname"
 	printf "2.1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
@@ -42,7 +42,8 @@ package() {
 	cd nintenno-surf
 	mkdir -p ${pkgdir}/opt/${pkgname}
 	cp -rf * ${pkgdir}/opt/${pkgname}
-	sudo make PREFIX=/usr DESTIR="$pkgdir" install
+	# sudo make PREFIX=/usr DESTIR="$pkgdir" install
+	sudo make install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/nintenno-surf/LICENSE"
 	install -Dm644 README "${pkgdir}/usr/share/doc/nintenno-surf/README"
 }
