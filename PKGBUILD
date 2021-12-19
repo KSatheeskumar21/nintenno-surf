@@ -28,7 +28,7 @@ noextract=()
 md5sums=('SKIP')
 validpgpkeys=()
 
-prepare() {
+pkgver() {
 	cd "$pkgname"
 	printf "2.1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
