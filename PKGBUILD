@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <k.sath214@gmail.com>
 pkgname=nintenno-surf
-pkgver=2.1.r5.600ff67
+pkgver=2.1.r7.94fd8d5
 pkgrel=1
 pkgdesc="My Personal surf build at https://github.com/KSatheeskumar21/nintenno-surf"
 arch=(x86_64)
@@ -35,7 +35,7 @@ pkgver() {
 
 build() {
 	cd nintenno-surf
-	make X11INC=/usr/include/X11 X11LIB=/usr/lib/X11
+	make 
 }
 
 package() {
