@@ -5,7 +5,7 @@
 
 # Maintainer: Your Name <k.sath214@gmail.com>
 pkgname=nintenno-surf
-pkgver=2.1.r7.94fd8d5
+pkgver=2.1.r8.2998b6e
 pkgrel=1
 pkgdesc="My Personal surf build at https://github.com/KSatheeskumar21/nintenno-surf"
 arch=(x86_64)
