@@ -64,7 +64,7 @@ install: all
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
 	sed "s/VERSION/$(VERSION)/g" < surf.1 > $(DESTDIR)$(MANPREFIX)/man1/surf.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/surf.1
-	cp surf-open.sh $(PREFIX)/bin/surf-open
+	cp surf-open.sh $(DESTDIR)$(PREFIX)/bin/surf-open
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/surf

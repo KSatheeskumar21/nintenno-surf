@@ -42,8 +42,7 @@ package() {
 	cd nintenno-surf
 	mkdir -p ${pkgdir}/opt/${pkgname}
 	cp -rf * ${pkgdir}/opt/${pkgname}
-	sudo make PREFIX=/usr DESTIR="${pkgdir}" install
-	# sudo make install
+	make PREFIX=/usr DESTDIR="${pkgdir}" install
 	install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/nintenno-surf/LICENSE"
 	install -Dm644 README "${pkgdir}/usr/share/doc/nintenno-surf/README"
 }
